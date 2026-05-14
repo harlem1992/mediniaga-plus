@@ -57,69 +57,55 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
-<script>
-const products = [
-  { title: "AAMI Isolation Gown Class II (55gsm)", price: "RM 4.50", category: "medical", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/products/isolationgown.jpg" },
-  { title: "Mediniaga Non-Medical Disposable Latex Gloves (Lightly Powdered)", price: "From RM 12.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/products/latex-pwodered-9inch_f12bf2c5-24c9-4850-a8da-82299897e698.jpg" },
-  { title: "Mediniaga Non-Medical Disposable Nitrile Gloves (Powder Free)", price: "From RM 16.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/products/NITRILE.jpg" },
-  { title: "Microwave Clear Plastic Rectangular Food Container 10PCS/SET", price: "From RM 8.00", category: "containers", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/5..jpg" },
-  { title: "mediniaga Disposable Latex Gloves (Powdered/Powder Free)", price: "From RM 7.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/ed84d4e4ed2dea59f538f0720.jpg" },
-  { title: "mediniaga LOOSE BAG Disposable Nitrile Gloves (Powder Free)", price: "From RM 8.88", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/0ad4d8bac0549af06a37977b7.jpg" },
-  { title: "mediniaga LOOSE BAG Disposable Latex Gloves", price: "From RM 6.50", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/f06b400068f209a1fbf0f0c0f.jpg" },
-  { title: '[BULK 50 BOX] Nitrile Disposable Gloves BLUE/BLACK', price: "From RM 630.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7r98z-ll4kst0.jpg" },
-  { title: '[BULK 50 BOX] Disposable Latex Gloves', price: "From RM 500.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/026f5ebec9a5a6d9425115b05.jpg" },
-  { title: "mediniaga BLUE Disposable Nitrile Gloves (Powder Free)", price: "From RM 15.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/632568ea1bfefed72af8c00ba.jpg" },
-  { title: 'mediniaga 9" Black Disposable Gloves (Powder Free)', price: "From RM 7.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7r98v-lz5uzyc.jpg" },
-  { title: 'NO RING Disposable Gloves (100pcs) [NO BOX]', price: "From RM 8.88", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/69138b054a1f57d8625475bac.jpg" },
-  { title: '12" Multipurpose Latex Disposable Gloves (L/R) [NO BOX]', price: "From RM 8.88", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/38750cfa0595bea53c1751b10.jpg" },
-  { title: "1PCS Courier Bag 【NO Pocket】 Parcel Bag", price: "From RM 0.50", category: "catering", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/a9463463ac947b09133fcc600.jpg" },
-  { title: 'SINGLE USE DISH-WASHING 12" Latex Hand Specific Gloves', price: "RM 2.50", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/5e73cae6eb520b90eb02d6323.jpg" },
-  { title: '"proteq" CPE/TPE Glove [FOOD GRADE]', price: "From RM 6.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/01f646cb4aa33076723c32134.jpg" },
-  { title: "4 Compartment PP Lunch Box with Lid [50pcs]", price: "RM 60.00", category: "containers", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7qukz-lghd859.jpg" },
-  { title: "BBB750A: DISPOSABLE CLEAR PLASTIC CONTAINER 50pcs/set", price: "RM 20.00", category: "containers", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7quky-lghdrds.jpg" },
-  { title: "Sandwich Box with Lock [100pcs]", price: "RM 25.00", category: "containers", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7qul9-lghdrds.jpg" },
-  { title: "8oz Disposable PP Cup (100cs) / 230ml", price: "RM 8.00", category: "catering", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7qul2-lghdrds.jpg" },
-  { title: "HM Plastic Bag for Takeaway Oxo-Biodegradable", price: "From RM 3.00", category: "catering", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7qul2-lghdrds.jpg" },
-  { title: '"mediniaga" Nitrile DIAMOND Grip Disposable Gloves [HEAVY DUTY]', price: "From RM 18.00", category: "gloves", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/my-11134207-7r98v-lvijg2q.jpg" },
-  { title: "Surgical Sterile Glove Latex (Powdered/Powder Free)", price: "From RM 25.00", category: "medical", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/sg-11134201-7rdyv-lzai8p7.jpg" },
-  { title: "Mediniaga 3D Printed Glove Box Holder", price: "From RM 15.00", category: "medical", image: "https://cdn.shopify.com/s/files/1/0544/6061/2799/files/18c425df65a1433a9f68ab7ba.jpg" },
-];
+<script src="js/config.js"></script><script>
+const categoryMap = {
+  gloves: ["gloves", "Gloves", "Nitrile", "Latex", "Vinyl"],
+  containers: ["containers", "Container", "Lunch Box", "Sandwich", "Microwave"],
+  medical: ["medical", "Medical", "Gown", "Isolation", "Surgical", "Sterile"],
+  catering: ["catering", "Catering", "Bag", "Cup", "Plastic Bag", "Takeaway", "Parcel", "Cutlery"]
+};
 
-function renderProducts(filter) {
-  const grid = document.getElementById('product-grid');
-  const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
-  if (filtered.length === 0) {
-    grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--gray-500);padding:40px;">No products in this category yet.</p>';
-    return;
-  }
-  grid.innerHTML = filtered.map(p => `
-    <div class="product-card" data-category="${p.category}">
-      <div class="product-card-image"><img src="${p.image}" alt="${p.title}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23e8e8f0%22 width=%22200%22 height=%22200%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%238a8a9a%22 font-size=%2214%22>${p.category}</text></svg>'"></div>
-      <div class="product-card-body">
-        <div class="product-card-category">${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</div>
-        <div class="product-card-title">${p.title}</div>
-        <div class="product-card-price">${p.price}</div>
-        <a href="/contact.html" class="btn-primary">Request Quote</a>
-      </div>
-    </div>
-  `).join('');
+function detectCategory(name) {
+  const c = (name || "").toLowerCase();
+  if (c.includes("surgical") || c.includes("isolation") || c.includes("sterile") || c.includes("gown")) return "medical";
+  if (c.includes("nitrile") || c.includes("latex") || c.includes("vinyl") || c.includes("glove")) return "gloves";
+  if (c.includes("container") || c.includes("lunch") || c.includes("sandwich") || c.includes("microwave") || c.includes("box")) return "containers";
+  if (c.includes("cup") || c.includes("bag") || c.includes("cutlery") || c.includes("straw") || c.includes("takeaway") || c.includes("parcel")) return "catering";
+  return "other";
 }
 
-// Handle filter query param
-const params = new URLSearchParams(window.location.search);
-const initialFilter = params.get('category') || 'all';
-
-document.addEventListener('DOMContentLoaded', () => {
-  renderProducts(initialFilter);
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    if (btn.dataset.filter === initialFilter) btn.classList.add('active');
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderProducts(btn.dataset.filter);
+async function loadProducts() {
+  const grid = document.getElementById("product-grid");
+  grid.innerHTML = "<p style=...>Loading products...</p>";
+  try {
+    const r = await fetch(HYGRAPH.hygraphApi, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + HYGRAPH.hygraphToken },
+      body: JSON.stringify({ query: "{ products { name slug description price } }" })
     });
-  });
-});
+    const d = await r.json();
+    const items = d.data?.products || [];
+    window.allProds = items.map(p => ({ title: p.name || p.slug, price: p.price || "Contact for pricing", category: detectCategory(p.name || "") }));
+    renderProds("all", window.allProds);
+    document.querySelectorAll(".filter-btn").forEach(b => {
+      b.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(x => x.classList.remove("active"));
+        b.classList.add("active");
+        if (window.allProds) renderProds(b.dataset.filter, window.allProds);
+      });
+    });
+  } catch(e) { grid.innerHTML = "<p>Could not load products.</p>"; }
+}
+
+function renderProds(filter, prods) {
+  const grid = document.getElementById("product-grid");
+  const f = filter === "all" ? prods : prods.filter(p => p.category === filter);
+  if (!f.length) { grid.innerHTML = "<p>No products in this category.</p>"; return; }
+  grid.innerHTML = f.map(p => `<div class="product-card"><div class="product-card-image" style="background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:3rem;">📦</div><div class="product-card-body"><div class="product-card-category">${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</div><div class="product-card-title">${p.title}</div><div class="product-card-price">${p.price}</div><a href="/contact.html" class="btn-primary">Request Quote</a></div></div>`).join("");
+}
+
+const params = new URLSearchParams(window.location.search);
+document.addEventListener("DOMContentLoaded", loadProducts);
 </script>
 </body>
 </html>
