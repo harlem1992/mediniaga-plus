@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Blog — Mediniaga Plus | Healthcare Industry Insights</title>
+<meta name="description" content="Mediniaga Plus blog — insights on disposable gloves, medical consumables, food packaging, hospital catering, and the healthcare supply industry in Malaysia.">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav><div class="nav-inner">
+<a href="/" class="nav-logo"><span>🛡️</span> mediniaga<span style="color:var(--teal)">+</span></a>
+<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-links">
+<a href="/">Home</a><a href="/products.html">Products</a><a href="/industries.html">Industries</a>
+<a href="/about.html">About</a><a href="/blog.html" class="active">Blog</a><a href="/contact.html" class="nav-cta">Get Quote</a>
+</div></div></nav>
+
+<section class="page-header"><div class="container"><h1>Blog</h1><p>Insights on healthcare supplies, industry trends, and product guides from the Mediniaga team.</p></div></section>
+
+<section class="section"><div class="container"><div class="blog-grid" id="blog-grid">
+<p style="color:var(--gray-500);text-align:center;padding:40px;">Loading articles...</p>
+</div></div></section>
+
+<footer><div class="container"><div class="footer-grid">
+<div class="footer-brand"><div class="nav-logo">🛡️ mediniaga<span style="color:var(--teal)">+</span></div><p>Mediniaga Plus Sdn Bhd — Malaysian distributor of medical devices, consumables, and hygiene solutions.</p></div>
+<div><h4>Products</h4><a href="/products.html?category=gloves">Disposable Gloves</a><a href="/products.html?category=containers">Plastic Containers</a><a href="/products.html?category=medical">Medical Consumables</a><a href="/products.html?category=catering">Catering Disposables</a></div>
+<div><h4>Company</h4><a href="/about.html">About Us</a><a href="/industries.html">Industries</a><a href="/blog.html" class="active">Blog</a><a href="/contact.html">Contact</a></div>
+<div><h4>Contact</h4><a href="tel:+601123288552">+6011 2328 8552</a><a href="mailto:ken@mediniaga.com">ken@mediniaga.com</a><a href="#">A-28-8, Menara UOA Bangsar<br>Bangsar, Kuala Lumpur 59000</a></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Mediniaga Plus Sdn Bhd (1391776-T)</span><span>Built for reliability. Delivered with care.</span></div></div></footer>
+<script src="js/main.js"></script>
+<script>
+const articles = [
+  { title: "Use of personal protective equipment during the COVID-19 pandemic", date: "2025-03-31", excerpt: "The COVID-19 pandemic has fundamentally changed how healthcare facilities approach PPE usage and procurement..." },
+  { title: "How to double mask correctly", date: "2024-10-15", excerpt: "With new variants emerging, proper masking technique remains critical for healthcare workers..." },
+  { title: "What are CPE and TPE gloves?", date: "2024-08-12", excerpt: "Understanding the differences between CPE and TPE gloves and their applications in food service and healthcare..." },
+  { title: "Pahang has the highest infectivity rate in the country", date: "2024-07-20", excerpt: "Analysis of COVID-19 infectivity rates across Malaysian states and implications for healthcare supply..." },
+  { title: "Self-test kits useful but dispose properly", date: "2024-06-18", excerpt: "Guidance on proper disposal of medical self-test kits and biohazard waste management..." },
+  { title: "Why The Delta Variant Is Hyper-Contagious", date: "2024-05-22", excerpt: "A new study sheds light on why the Delta variant spreads so rapidly and what it means for PPE protocols..." },
+  { title: "Covid-19: Do's And Don'ts During Home Quarantine", date: "2024-04-10", excerpt: "Essential guidelines for home quarantine including proper use of disposable gloves and masks..." },
+  { title: "What is the Lambda variant?", date: "2024-03-15", excerpt: "Overview of the Lambda variant and its implications for healthcare supply chains..." },
+  { title: "What are the Advantages of Using Disposable Latex Gloves?", date: "2024-02-20", excerpt: "A comprehensive guide to the benefits of latex gloves in medical and industrial applications..." },
+  { title: "The 11 Covid-19 self-test kits with MoH's approval", date: "2024-01-08", excerpt: "Complete list of MOH-approved self-test kits available in Malaysia..." },
+  { title: "All about Molnupiravir, the anti-Covid pill", date: "2021-10-04", excerpt: "Understanding the new oral antiviral treatment for COVID-19..." },
+  { title: "What Are the Benefits of Using Nitrile Gloves?", date: "2021-10-29", excerpt: "Nitrile is the most popular disposable glove material. Learn why..." },
+  { title: "The Growing Market for Disposable Gloves: Uses, Trends, and Future Growth", date: "2025-03-31", excerpt: "Disposable gloves have become essential across industries. Market trends and growth projections..." },
+  { title: "Global Disposable Medical Supplies Market 2026", date: "2026-05-14", excerpt: "The global single-use medical devices market hits USD 187.51 billion in 2026. Analysis for Malaysian suppliers..." },
+];
+const grid = document.getElementById('blog-grid');
+grid.innerHTML = articles.map((a,i) => `
+  <div class="blog-card" onclick="location.href='/blog/article${i+1}.html'">
+    <div class="blog-card-body">
+      <div class="blog-card-date">${new Date(a.date).toLocaleDateString('en-MY',{day:'numeric',month:'long',year:'numeric'})}</div>
+      <div class="blog-card-title">${a.title}</div>
+      <div class="blog-card-excerpt">${a.excerpt}</div>
+      <span class="blog-card-link">Read more →</span>
+    </div>
+  </div>
+`).join('');
+</script>
+</body></html>
